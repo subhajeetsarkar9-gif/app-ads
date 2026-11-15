@@ -48,17 +48,11 @@
             gap: 12px;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #ff6d00, #ff9e40);
+        .logo-img {
+            width: 44px;
+            height: 44px;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 20px;
-            color: white;
+            object-fit: cover;
             box-shadow: 0 4px 15px rgba(255, 109, 0, 0.4);
         }
 
@@ -82,9 +76,17 @@
 
         .hero {
             text-align: center;
-            padding: 100px 20px 60px;
+            padding: 90px 20px 60px;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .hero-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(255, 109, 0, 0.3);
         }
 
         .hero h1 {
@@ -202,7 +204,7 @@
 
     <header>
         <div class="logo-container">
-            <div class="logo-icon">SX</div>
+            <img src="logo.png" alt="SX Player Logo" class="logo-img" onerror="this.onerror=null; this.src='logo';">
             <div class="brand-name">SX Player</div>
         </div>
         <nav>
@@ -213,6 +215,7 @@
     </header>
 
     <section class="hero">
+        <img src="logo.png" alt="SX Player" class="hero-logo" onerror="this.onerror=null; this.src='logo';">
         <h1>Fast. Powerful. Easy.<br>HD Video Player</h1>
         <p>Experience smooth playback, gesture controls, subtitle support, and modern UI designed for Android.</p>
         <a href="https://play.google.com/store/apps/details?id=com.subhaworld.sxplayer" target="_blank" class="cta-btn">Get it on Google Play</a>
