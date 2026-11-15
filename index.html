@@ -1,11 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SX Player Support</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SX Player - HD Video Player | Official Site</title>
+    <meta name="description" content="Fast, Powerful, and Easy HD Video Player for Android. Enjoy seamless video playback, subtitles, and customizable controls.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #ff6d00;
+            --accent-hover: #e66200;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6d00, #ff9e40);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 109, 0, 0.4);
+        }
+
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff, #ff9e40);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(255, 109, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(255, 109, 0, 0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .section {
+            padding: 60px 8%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 1px solid #1e293b;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .section p, .section ul {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #1e293b;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav { display: none; }
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding: 50px;">
-  <h1>SX Player - HD Video Player</h1>
-  <p>Official Developer Support Site</p>
-  <p><a href="app-ads.txt">View app-ads.txt</a></p>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">SX</div>
+            <div class="brand-name">SX Player</div>
+        </div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Fast. Powerful. Easy.<br>HD Video Player</h1>
+        <p>Experience smooth playback, gesture controls, subtitle support, and modern UI designed for Android.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.subhaworld.sxplayer" target="_blank" class="cta-btn">Get it on Google Play</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🎬</div>
+            <h3>All Formats Supported</h3>
+            <p>Play MP4, MKV, AVI, WEBM, MOV, and many more video formats with hardware acceleration.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Intuitive Gestures</h3>
+            <p>Easily control volume, brightness, and seeking with smooth swipe gestures.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Background & PIP Mode</h3>
+            <p>Keep watching your videos in Picture-in-Picture mode while multitasking.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>Subtitle Support</h3>
+            <p>Load external subtitles seamlessly and customize font size, color, and alignment.</p>
+        </div>
+    </section>
+
+    <section id="privacy" class="section">
+        <h2>Privacy Policy</h2>
+        <p>At SX Player (developed by Subha World), we respect your privacy. SX Player operates primarily as an on-device local video player.</p>
+        <ul>
+            <li><strong>Media & Storage Access:</strong> Required to read and display local video files stored on your device.</li>
+            <li><strong>Advertising:</strong> We use Google AdMob to display non-intrusive ads. AdMob may collect anonymous device identifiers for ad personalization according to Google Play Policies.</li>
+            <li><strong>Data Collection:</strong> We do not collect, store, or share your personal private data on external servers.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Developer Support</h2>
+        <p>If you have any questions, feedback, or support requests regarding SX Player, feel free to reach out:</p>
+        <p><strong>Email:</strong> <a href="mailto:support.subhaworld@gmail.com">support.subhaworld@gmail.com</a></p>
+        <p><strong>Developer:</strong> Subha World</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Subha World. All Rights Reserved. | <a href="app-ads.txt">app-ads.txt</a></p>
+    </footer>
+
 </body>
 </html>
